@@ -1,6 +1,0 @@
-Name: Garcia, John Carlo A. 
-CYS: BSCS 2E
-Subject: DC 101 - Web Development 1
-Age: 21
-instructor: Engr. John Eugene D. Fortunado
-Address: Brgy. Kayumanggi, Lipa City, Batangas
