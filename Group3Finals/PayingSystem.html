@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <h2>Payment Information</h2>
+        <form action="confirmation.html" method="GET">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="card-number">Credit Card Number (6 digits)</label>
+                <input type="number" id="card-number" name="card-number" required pattern="\d{6}" maxlength="6" placeholder="123456">
+            </div>
+
+            <div class="form-group">
+                <label for="rental-days">Number of Rental Days</label>
+                <input type="number" id="rental-days" name="rental-days" min="1" max="30" required placeholder="1-30">
+            </div>
+
+            <div class="form-group">
+                <label for="price-confirmation">Confirm $65/day</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="price-confirmation-checkbox" name="price-confirmation" required>
+                    <label for="price-confirmation-checkbox" style="font-weight: normal;">
+                        I acknowledge that $65 will be deducted daily for each day selected.
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
