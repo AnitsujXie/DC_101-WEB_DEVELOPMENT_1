@@ -155,15 +155,18 @@ section h2 {
     flex-direction: column;
     font-size: 1em;
     margin-bottom: 5px;
+    align-items: center;
 }
 
 .car-details ul li strong {
     font-weight: bold;
     color: #333;
+    text-align: center;
 }
 
 .car-details ul li span {
     color: #666;
+    text-align: center;
 }
 
 .car-item {
